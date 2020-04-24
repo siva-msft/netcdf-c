@@ -26,6 +26,7 @@ large dataset may be accessed efficiently, without first reading through
 all the preceding data.  `Extendible` means that data can be appended to
 a netCDF dataset without copying it or redefining its structure.
 
+
 #### Use
 NetCDF is useful for supporting access to diverse kinds of scientific
 data in heterogeneous networking environments and for writing
