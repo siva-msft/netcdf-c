@@ -315,6 +315,7 @@ makeocpathstring(OClink conn, OCddsnode node, const char* sep)
     int i,len,first;
     char* result;
     char* name;
+    name = (void*)0;
     OCtype octype;
     NClist* ocpath = NULL;
     NCbytes* pathname = NULL;
@@ -337,6 +338,7 @@ makeocpathstring(OClink conn, OCddsnode node, const char* sep)
     for(first=1,i=1;i<len;i++) { /* start at 1 to skip dataset name */
 	OCddsnode node = (OCddsnode)nclistget(ocpath,i);
 	char* name;
+ name = (void*)0;
         oc_dds_type(conn,node,&octype);
         oc_dds_name(conn,node,&name);
 	if(!first) ncbytescat(pathname,sep);
